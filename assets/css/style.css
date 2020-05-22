@@ -28,12 +28,13 @@ body {
 }
 .image {
     position: relative;
-    /* border: 3px solid rgb(128, 219, 176); */
+    border: 3px solid rgb(18, 109, 184);
     height: 60vh;
     width: 70%;
     background: url("../images/pic-1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 ion-icon {
     background-color: rgb(128, 219, 176, 0);

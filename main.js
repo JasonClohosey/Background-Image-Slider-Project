@@ -22,22 +22,17 @@ buttons.forEach((button) => {
     button.addEventListener("click", function() {
         if (button.classList.contains("backBtn")) {
             imagesIndex--
-            console.log("imageIndex Should decrease", imagesIndex);
+        if (imagesIndex < 0) {
+            imagesIndex = image.length - 1;
+        }   
             changeImage()
         }
         if (button.classList.contains("forwardBtn")) {
             imagesIndex++
-            console.log("imageIndex Should increase", imagesIndex);
+        if (imagesIndex > image.length - 1) {
+            imagesIndex = 0;
+        }    
             changeImage()
         }
-    // for (let i = 0; i < image.length; i++) {
-    //     const nextImage = image[i];
-    //     console.log(nextImage)
-    //     document.querySelector(".image").style.backgroundImage = `url("images/pic-${nextImage}")`;
-    //     console.log(nextImage)
-    // }
-        
-
-
     });
 });
